@@ -413,14 +413,24 @@ This library contains **{total}** icons extracted from the Dynamics 365 CRM MDL2
 
 Icons with semantic entity names from Dynamics 365 CSS definitions.
 
-| Icon | Name | Preview |
-|------|------|---------|
+| Icon | Name | Preview | Icon | Name | Preview |
+|------|------|---------|------|------|---------|
 """.format(total=len(icon_files), named=len(named_icons), undoc=len(undocumented_icons))
     
-    # Add named icons
-    for icon_file in named_icons:
-        name = icon_file.replace('.svg', '')
-        readme += f"| ![{name}](icons/{icon_file}) | **{name}** | [View](icons/{icon_file}) |\n"
+    # Add named icons in 2-column layout
+    for i in range(0, len(named_icons), 2):
+        icon1 = named_icons[i]
+        name1 = icon1.replace('.svg', '')
+        row = f"| ![{name1}](icons/{icon1}) | **{name1}** | [View](icons/{icon1}) |"
+        
+        if i + 1 < len(named_icons):
+            icon2 = named_icons[i + 1]
+            name2 = icon2.replace('.svg', '')
+            row += f" ![{name2}](icons/{icon2}) | **{name2}** | [View](icons/{icon2}) |\n"
+        else:
+            row += " | | |\n"
+        
+        readme += row
     
     # Add Undocumented icons section
     readme += f"""

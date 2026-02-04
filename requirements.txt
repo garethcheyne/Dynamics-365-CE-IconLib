@@ -1,0 +1,2 @@
+fonttools>=4.38.0
+cairosvg>=2.7.0

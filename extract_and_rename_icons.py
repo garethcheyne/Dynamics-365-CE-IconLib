@@ -7,6 +7,7 @@ import sys
 import shutil
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
+from cairosvg import svg2png
 
 # Ensure UTF-8 encoding for console output
 sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
@@ -15,6 +16,7 @@ sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') e
 FONT_FILE = 'CRMMDL2.9a8be239d5ecd10b97d8f91920f0df73.woff'
 OUTPUT_DIR = 'icons'
 UNDOCUMENTED_DIR = 'icons/undocumented'
+PNG_SIZES = [16, 32, 48, 128]  # PNG export sizes
 
 # Entity name to Unicode mappings from styles.css
 # Includes both .entity-symbol.Name and .Name-symbol patterns
@@ -393,6 +395,57 @@ def save_icons_with_names(extracted_icons):
     return all_files
 
 
+def convert_svg_to_png(svg_files):
+    """Convert SVG files to PNG at multiple sizes."""
+    print(f"\n{'='*60}")
+    print("Converting SVGs to PNG...")
+    print(f"{'='*60}\n")
+    
+    # Create PNG directories for each size
+    png_dirs = {}
+    for size in PNG_SIZES:
+        png_dir = f"{OUTPUT_DIR}/png{size}x{size}"
+        png_dirs[size] = png_dir
+        os.makedirs(png_dir, exist_ok=True)
+        
+        # Create undocumented subdirectory
+        undoc_png_dir = os.path.join(png_dir, 'undocumented')
+        os.makedirs(undoc_png_dir, exist_ok=True)
+    
+    total_conversions = 0
+    
+    for svg_file in svg_files:
+        # Determine source and output paths
+        if svg_file.startswith('undocumented/'):
+            svg_path = os.path.join(OUTPUT_DIR, svg_file)
+            base_name = svg_file.replace('undocumented/', '').replace('.svg', '')
+            is_undocumented = True
+        else:
+            svg_path = os.path.join(OUTPUT_DIR, svg_file)
+            base_name = svg_file.replace('.svg', '')
+            is_undocumented = False
+        
+        # Convert to each size
+        for size in PNG_SIZES:
+            if is_undocumented:
+                png_path = os.path.join(png_dirs[size], 'undocumented', f"{base_name}.png")
+            else:
+                png_path = os.path.join(png_dirs[size], f"{base_name}.png")
+            
+            try:
+                svg2png(url=svg_path, write_to=png_path, output_width=size, output_height=size)
+                total_conversions += 1
+            except Exception as e:
+                print(f"✗ Error converting {svg_file} to {size}x{size}: {e}")
+    
+    print(f"\n✓ Converted {len(svg_files)} icons to {len(PNG_SIZES)} sizes")
+    print(f"✓ Total PNG files created: {total_conversions}")
+    
+    for size in PNG_SIZES:
+        print(f"  - {size}x{size} in {png_dirs[size]}/")
+
+
+
 def create_readme(icon_files):
     """Create a README.md file with an icon matrix."""
     print("\nGenerating README.md with icon matrix...")
@@ -458,11 +511,47 @@ Stored in the `icons/undocumented/` folder.
 
 ## Usage
 
-### In HTML
+### SVG Icons
+
+#### In HTML
 ```html
 <img src="icons/Account.svg" alt="Account" width="24" height="24">
 <!-- Or undocumented icons -->
 <img src="icons/undocumented/icon_U+E700.svg" alt="Icon" width="24" height="24">
+```
+
+#### In CSS
+```css
+.icon {
+  background-image: url('icons/Account.svg');
+  width: 24px;
+  height: 24px;
+}
+```
+
+#### Direct SVG
+```html
+<svg width="24" height="24">
+  <use href="icons/Account.svg#icon"/>
+</svg>
+```
+
+### PNG Icons
+
+PNG versions are available in multiple sizes: 16x16, 32x32, 48x48, and 128x128 pixels.
+
+```html
+<!-- 16x16 -->
+<img src="icons/png16x16/Account.png" alt="Account" width="16" height="16">
+
+<!-- 32x32 -->
+<img src="icons/png32x32/Account.png" alt="Account" width="32" height="32">
+
+<!-- 48x48 -->
+<img src="icons/png48x48/Account.png" alt="Account" width="48" height="48">
+
+<!-- 128x128 -->
+<img src="icons/png128x128/Account.png" alt="Account" width="128" height="128">
 ```
 
 ### In CSS
@@ -484,10 +573,11 @@ Stored in the `icons/undocumented/` folder.
 ## Extraction Process
 
 Icons were extracted from `CRMMDL2.woff` font file using FontTools and mapped to entity names from Dynamics 365 CSS classes.
+PNG versions are generated from SVG sources at multiple resolutions.
 
 To re-extract icons:
 ```bash
-pip install fonttools
+pip install fonttools cairosvg
 python extract_and_rename_icons.py
 ```
 
@@ -550,14 +640,19 @@ def main():
     # Step 2: Save with entity names
     icon_files = save_icons_with_names(extracted_icons)
     
-    # Step 3: Create README with icon matrix
+    # Step 3: Convert SVG to PNG at multiple sizes
+    convert_svg_to_png(icon_files)
+    
+    # Step 4: Create README with icon matrix
     create_readme(icon_files)
     
-    # Step 4: Clean up
+    # Step 5: Clean up
     print("\nCleaning up temporary files...")
     cleanup_temp_files()
     
     print("\n✓ Done! All icons extracted to 'icons/' folder")
+    print("✓ SVG icons in 'icons/' folder")
+    print("✓ PNG icons in 'icons/png16x16/', 'icons/png32x32/', 'icons/png48x48/', 'icons/png128x128/' folders")
     print("✓ View README.md for icon gallery")
 
 

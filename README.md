@@ -256,11 +256,47 @@ Stored in the `icons/undocumented/` folder.
 
 ## Usage
 
-### In HTML
+### SVG Icons
+
+#### In HTML
 ```html
 <img src="icons/Account.svg" alt="Account" width="24" height="24">
 <!-- Or undocumented icons -->
 <img src="icons/undocumented/icon_U+E700.svg" alt="Icon" width="24" height="24">
+```
+
+#### In CSS
+```css
+.icon {
+  background-image: url('icons/Account.svg');
+  width: 24px;
+  height: 24px;
+}
+```
+
+#### Direct SVG
+```html
+<svg width="24" height="24">
+  <use href="icons/Account.svg#icon"/>
+</svg>
+```
+
+### PNG Icons
+
+PNG versions are available in multiple sizes: 16x16, 32x32, 48x48, and 128x128 pixels.
+
+```html
+<!-- 16x16 -->
+<img src="icons/png16x16/Account.png" alt="Account" width="16" height="16">
+
+<!-- 32x32 -->
+<img src="icons/png32x32/Account.png" alt="Account" width="32" height="32">
+
+<!-- 48x48 -->
+<img src="icons/png48x48/Account.png" alt="Account" width="48" height="48">
+
+<!-- 128x128 -->
+<img src="icons/png128x128/Account.png" alt="Account" width="128" height="128">
 ```
 
 ### In CSS
@@ -282,10 +318,11 @@ Stored in the `icons/undocumented/` folder.
 ## Extraction Process
 
 Icons were extracted from `CRMMDL2.woff` font file using FontTools and mapped to entity names from Dynamics 365 CSS classes.
+PNG versions are generated from SVG sources at multiple resolutions.
 
 To re-extract icons:
 ```bash
-pip install fonttools
+pip install fonttools cairosvg
 python extract_and_rename_icons.py
 ```
 

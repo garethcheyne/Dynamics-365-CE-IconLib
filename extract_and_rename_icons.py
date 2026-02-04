@@ -3,13 +3,18 @@ Extract and Rename Dynamics 365 Icons
 Extracts SVG icons from WOFF font file and renames them with meaningful entity names.
 """
 import os
+import sys
 import shutil
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 
+# Ensure UTF-8 encoding for console output
+sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
+
 # Configuration
 FONT_FILE = 'CRMMDL2.9a8be239d5ecd10b97d8f91920f0df73.woff'
 OUTPUT_DIR = 'icons'
+UNDOCUMENTED_DIR = 'icons/undocumented'
 
 # Entity name to Unicode mappings from styles.css
 # Includes both .entity-symbol.Name and .Name-symbol patterns
@@ -284,7 +289,10 @@ def extract_icons_from_font():
     print(f"Loading font: {FONT_FILE}")
     font = TTFont(FONT_FILE)
     
-    # Create output directory
+    # Clean and recreate output directory to avoid leftover icons
+    if os.path.exists(OUTPUT_DIR):
+        print(f"Cleaning existing '{OUTPUT_DIR}/' folder...")
+        shutil.rmtree(OUTPUT_DIR)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     glyf_table = font['glyf']
@@ -334,6 +342,9 @@ def save_icons_with_names(extracted_icons):
     unnamed_count = 0
     all_files = []
     
+    # Create subdirectory for undocumented icons
+    os.makedirs(UNDOCUMENTED_DIR, exist_ok=True)
+    
     # Create reverse mapping: unicode -> entity_names
     unicode_to_entities = {}
     for entity_name, unicode_hex in ENTITY_MAPPINGS.items():
@@ -347,7 +358,7 @@ def save_icons_with_names(extracted_icons):
         if unicode_hex in unicode_to_entities:
             entity_names = unicode_to_entities[unicode_hex]
             
-            # Save with entity name(s)
+            # Save with entity name(s) to main icons directory
             for entity_name in entity_names:
                 filename = f"{entity_name}.svg"
                 filepath = os.path.join(OUTPUT_DIR, filename)
@@ -359,25 +370,25 @@ def save_icons_with_names(extracted_icons):
                 saved_count += 1
                 print(f"✓ {filename}")
         else:
-            # Save with unicode name for unmapped icons
+            # Save with unicode name to undocumented subdirectory
             filename = f"icon_U+{unicode_hex}.svg"
-            filepath = os.path.join(OUTPUT_DIR, filename)
+            filepath = os.path.join(UNDOCUMENTED_DIR, filename)
             
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(svg_content)
             
-            all_files.append(filename)
+            all_files.append(f"undocumented/{filename}")
             unnamed_count += 1
     
     print(f"\n{'='*60}")
-    print(f"✓ Saved {saved_count} named icons")
-    print(f"✓ Saved {unnamed_count} icons with Unicode names")
-    print(f"📁 Total: {saved_count + unnamed_count} icons in '{OUTPUT_DIR}/'")
+    print(f"✓ Saved {saved_count} named icons to '{OUTPUT_DIR}/'")
+    print(f"✓ Saved {unnamed_count} undocumented icons to '{UNDOCUMENTED_DIR}/'")
+    print(f"📁 Total: {saved_count + unnamed_count} icons")
     print(f"{'='*60}\n")
     
     if unnamed_count > 0:
-        print(f"Note: {unnamed_count} icons don't have entity name mappings.")
-        print("You can add more mappings to ENTITY_MAPPINGS in this script.")
+        print(f"Note: {unnamed_count} icons are not defined in CSS (undocumented).")
+        print("These are stored separately in the 'undocumented' folder.")
     
     return all_files
 
@@ -386,48 +397,51 @@ def create_readme(icon_files):
     """Create a README.md file with an icon matrix."""
     print("\nGenerating README.md with icon matrix...")
     
-    # Sort icons alphabetically
-    sorted_icons = sorted(icon_files)
+    # Sort icons alphabetically (separate named and undocumented)
+    named_icons = sorted([f for f in icon_files if not f.startswith('undocumented/')])
+    undocumented_icons = sorted([f for f in icon_files if f.startswith('undocumented/')])
     
     # Create README content
     readme = """# Dynamics 365 Icon Library
 
 This library contains **{total}** icons extracted from the Dynamics 365 CRM MDL2 font.
 
+- **{named} documented icons** with semantic names (Account, Contact, OpenInBrowser, etc.)
+- **{undoc} undocumented icons** not defined in CSS (stored in `undocumented/` folder)
+
 ## Named Entity Icons ({named} icons)
 
-Icons with semantic entity names from Dynamics 365.
+Icons with semantic entity names from Dynamics 365 CSS definitions.
 
 | Icon | Name | Preview |
 |------|------|---------|
-""".format(total=len(sorted_icons), named=len([f for f in sorted_icons if not f.startswith('icon_U+')]))
+""".format(total=len(icon_files), named=len(named_icons), undoc=len(undocumented_icons))
     
     # Add named icons
-    named_icons = [f for f in sorted_icons if not f.startswith('icon_U+')]
     for icon_file in named_icons:
         name = icon_file.replace('.svg', '')
         readme += f"| ![{name}](icons/{icon_file}) | **{name}** | [View](icons/{icon_file}) |\n"
     
-    # Add Unicode icons section
+    # Add Undocumented icons section
     readme += f"""
-## Unicode Icons ({len(sorted_icons) - len(named_icons)} icons)
+## Undocumented Icons ({len(undocumented_icons)} icons)
 
-Additional icons identified by Unicode value.
+Additional icons in the font that are **not defined in CSS**. These may be internal, deprecated, or future icons.
+Stored in the `icons/undocumented/` folder.
 
 <details>
-<summary>Click to expand full Unicode icon list</summary>
+<summary>Click to expand undocumented icon list (first 100)</summary>
 
 | Icon | Unicode | Preview |
 |------|---------|---------|
 """
     
-    unicode_icons = [f for f in sorted_icons if f.startswith('icon_U+')]
-    for icon_file in unicode_icons[:100]:  # Show first 100 in README
-        name = icon_file.replace('.svg', '').replace('icon_', '')
+    for icon_file in undocumented_icons[:100]:  # Show first 100 in README
+        name = icon_file.replace('undocumented/', '').replace('.svg', '').replace('icon_', '')
         readme += f"| ![{name}](icons/{icon_file}) | **{name}** | [View](icons/{icon_file}) |\n"
     
-    if len(unicode_icons) > 100:
-        readme += f"\n*... and {len(unicode_icons) - 100} more Unicode icons*\n"
+    if len(undocumented_icons) > 100:
+        readme += f"\n*... and {len(undocumented_icons) - 100} more undocumented icons*\n"
     
     readme += """
 </details>
@@ -437,6 +451,8 @@ Additional icons identified by Unicode value.
 ### In HTML
 ```html
 <img src="icons/Account.svg" alt="Account" width="24" height="24">
+<!-- Or undocumented icons -->
+<img src="icons/undocumented/icon_U+E700.svg" alt="Icon" width="24" height="24">
 ```
 
 ### In CSS
@@ -482,7 +498,7 @@ These icons are part of Microsoft Dynamics 365 and subject to Microsoft's licens
     with open('README.md', 'w', encoding='utf-8') as f:
         f.write(readme)
     
-    print(f"✓ Created README.md with {len(sorted_icons)} icons")
+    print(f"✓ Created README.md with {len(icon_files)} icons")
 
 
 def cleanup_temp_files():

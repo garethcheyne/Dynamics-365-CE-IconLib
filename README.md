@@ -2,9 +2,12 @@
 
 This library contains **1016** icons extracted from the Dynamics 365 CRM MDL2 font.
 
+- **254 documented icons** with semantic names (Account, Contact, OpenInBrowser, etc.)
+- **762 undocumented icons** not defined in CSS (stored in `undocumented/` folder)
+
 ## Named Entity Icons (254 icons)
 
-Icons with semantic entity names from Dynamics 365.
+Icons with semantic entity names from Dynamics 365 CSS definitions.
 
 | Icon | Name | Preview |
 |------|------|---------|
@@ -263,117 +266,118 @@ Icons with semantic entity names from Dynamics 365.
 | ![WORKSPACE](icons/WORKSPACE.svg) | **WORKSPACE** | [View](icons/WORKSPACE.svg) |
 | ![WarningSolid](icons/WarningSolid.svg) | **WarningSolid** | [View](icons/WarningSolid.svg) |
 
-## Unicode Icons (762 icons)
+## Undocumented Icons (762 icons)
 
-Additional icons identified by Unicode value.
+Additional icons in the font that are **not defined in CSS**. These may be internal, deprecated, or future icons.
+Stored in the `icons/undocumented/` folder.
 
 <details>
-<summary>Click to expand full Unicode icon list</summary>
+<summary>Click to expand undocumented icon list (first 100)</summary>
 
 | Icon | Unicode | Preview |
 |------|---------|---------|
-| ![U+E30F](icons/icon_U+E30F.svg) | **U+E30F** | [View](icons/icon_U+E30F.svg) |
-| ![U+E314](icons/icon_U+E314.svg) | **U+E314** | [View](icons/icon_U+E314.svg) |
-| ![U+E35F](icons/icon_U+E35F.svg) | **U+E35F** | [View](icons/icon_U+E35F.svg) |
-| ![U+E365](icons/icon_U+E365.svg) | **U+E365** | [View](icons/icon_U+E365.svg) |
-| ![U+E36C](icons/icon_U+E36C.svg) | **U+E36C** | [View](icons/icon_U+E36C.svg) |
-| ![U+E36E](icons/icon_U+E36E.svg) | **U+E36E** | [View](icons/icon_U+E36E.svg) |
-| ![U+E36F](icons/icon_U+E36F.svg) | **U+E36F** | [View](icons/icon_U+E36F.svg) |
-| ![U+E399](icons/icon_U+E399.svg) | **U+E399** | [View](icons/icon_U+E399.svg) |
-| ![U+E39A](icons/icon_U+E39A.svg) | **U+E39A** | [View](icons/icon_U+E39A.svg) |
-| ![U+E39B](icons/icon_U+E39B.svg) | **U+E39B** | [View](icons/icon_U+E39B.svg) |
-| ![U+E39C](icons/icon_U+E39C.svg) | **U+E39C** | [View](icons/icon_U+E39C.svg) |
-| ![U+E3B9](icons/icon_U+E3B9.svg) | **U+E3B9** | [View](icons/icon_U+E3B9.svg) |
-| ![U+E3DB](icons/icon_U+E3DB.svg) | **U+E3DB** | [View](icons/icon_U+E3DB.svg) |
-| ![U+E3DC](icons/icon_U+E3DC.svg) | **U+E3DC** | [View](icons/icon_U+E3DC.svg) |
-| ![U+E3F2](icons/icon_U+E3F2.svg) | **U+E3F2** | [View](icons/icon_U+E3F2.svg) |
-| ![U+E3F3](icons/icon_U+E3F3.svg) | **U+E3F3** | [View](icons/icon_U+E3F3.svg) |
-| ![U+E435](icons/icon_U+E435.svg) | **U+E435** | [View](icons/icon_U+E435.svg) |
-| ![U+E43C](icons/icon_U+E43C.svg) | **U+E43C** | [View](icons/icon_U+E43C.svg) |
-| ![U+E456](icons/icon_U+E456.svg) | **U+E456** | [View](icons/icon_U+E456.svg) |
-| ![U+E4DA](icons/icon_U+E4DA.svg) | **U+E4DA** | [View](icons/icon_U+E4DA.svg) |
-| ![U+E4DB](icons/icon_U+E4DB.svg) | **U+E4DB** | [View](icons/icon_U+E4DB.svg) |
-| ![U+E562](icons/icon_U+E562.svg) | **U+E562** | [View](icons/icon_U+E562.svg) |
-| ![U+E666](icons/icon_U+E666.svg) | **U+E666** | [View](icons/icon_U+E666.svg) |
-| ![U+E67F](icons/icon_U+E67F.svg) | **U+E67F** | [View](icons/icon_U+E67F.svg) |
-| ![U+E695](icons/icon_U+E695.svg) | **U+E695** | [View](icons/icon_U+E695.svg) |
-| ![U+E696](icons/icon_U+E696.svg) | **U+E696** | [View](icons/icon_U+E696.svg) |
-| ![U+E697](icons/icon_U+E697.svg) | **U+E697** | [View](icons/icon_U+E697.svg) |
-| ![U+E701](icons/icon_U+E701.svg) | **U+E701** | [View](icons/icon_U+E701.svg) |
-| ![U+E706](icons/icon_U+E706.svg) | **U+E706** | [View](icons/icon_U+E706.svg) |
-| ![U+E709](icons/icon_U+E709.svg) | **U+E709** | [View](icons/icon_U+E709.svg) |
-| ![U+E70A](icons/icon_U+E70A.svg) | **U+E70A** | [View](icons/icon_U+E70A.svg) |
-| ![U+E70B](icons/icon_U+E70B.svg) | **U+E70B** | [View](icons/icon_U+E70B.svg) |
-| ![U+E710](icons/icon_U+E710.svg) | **U+E710** | [View](icons/icon_U+E710.svg) |
-| ![U+E714](icons/icon_U+E714.svg) | **U+E714** | [View](icons/icon_U+E714.svg) |
-| ![U+E71A](icons/icon_U+E71A.svg) | **U+E71A** | [View](icons/icon_U+E71A.svg) |
-| ![U+E71D](icons/icon_U+E71D.svg) | **U+E71D** | [View](icons/icon_U+E71D.svg) |
-| ![U+E71F](icons/icon_U+E71F.svg) | **U+E71F** | [View](icons/icon_U+E71F.svg) |
-| ![U+E720](icons/icon_U+E720.svg) | **U+E720** | [View](icons/icon_U+E720.svg) |
-| ![U+E722](icons/icon_U+E722.svg) | **U+E722** | [View](icons/icon_U+E722.svg) |
-| ![U+E725](icons/icon_U+E725.svg) | **U+E725** | [View](icons/icon_U+E725.svg) |
-| ![U+E729](icons/icon_U+E729.svg) | **U+E729** | [View](icons/icon_U+E729.svg) |
-| ![U+E736](icons/icon_U+E736.svg) | **U+E736** | [View](icons/icon_U+E736.svg) |
-| ![U+E737](icons/icon_U+E737.svg) | **U+E737** | [View](icons/icon_U+E737.svg) |
-| ![U+E738](icons/icon_U+E738.svg) | **U+E738** | [View](icons/icon_U+E738.svg) |
-| ![U+E73A](icons/icon_U+E73A.svg) | **U+E73A** | [View](icons/icon_U+E73A.svg) |
-| ![U+E73D](icons/icon_U+E73D.svg) | **U+E73D** | [View](icons/icon_U+E73D.svg) |
-| ![U+E73F](icons/icon_U+E73F.svg) | **U+E73F** | [View](icons/icon_U+E73F.svg) |
-| ![U+E740](icons/icon_U+E740.svg) | **U+E740** | [View](icons/icon_U+E740.svg) |
-| ![U+E748](icons/icon_U+E748.svg) | **U+E748** | [View](icons/icon_U+E748.svg) |
-| ![U+E749](icons/icon_U+E749.svg) | **U+E749** | [View](icons/icon_U+E749.svg) |
-| ![U+E74F](icons/icon_U+E74F.svg) | **U+E74F** | [View](icons/icon_U+E74F.svg) |
-| ![U+E757](icons/icon_U+E757.svg) | **U+E757** | [View](icons/icon_U+E757.svg) |
-| ![U+E75C](icons/icon_U+E75C.svg) | **U+E75C** | [View](icons/icon_U+E75C.svg) |
-| ![U+E75F](icons/icon_U+E75F.svg) | **U+E75F** | [View](icons/icon_U+E75F.svg) |
-| ![U+E760](icons/icon_U+E760.svg) | **U+E760** | [View](icons/icon_U+E760.svg) |
-| ![U+E762](icons/icon_U+E762.svg) | **U+E762** | [View](icons/icon_U+E762.svg) |
-| ![U+E767](icons/icon_U+E767.svg) | **U+E767** | [View](icons/icon_U+E767.svg) |
-| ![U+E768](icons/icon_U+E768.svg) | **U+E768** | [View](icons/icon_U+E768.svg) |
-| ![U+E76D](icons/icon_U+E76D.svg) | **U+E76D** | [View](icons/icon_U+E76D.svg) |
-| ![U+E76E](icons/icon_U+E76E.svg) | **U+E76E** | [View](icons/icon_U+E76E.svg) |
-| ![U+E773](icons/icon_U+E773.svg) | **U+E773** | [View](icons/icon_U+E773.svg) |
-| ![U+E775](icons/icon_U+E775.svg) | **U+E775** | [View](icons/icon_U+E775.svg) |
-| ![U+E777](icons/icon_U+E777.svg) | **U+E777** | [View](icons/icon_U+E777.svg) |
-| ![U+E778](icons/icon_U+E778.svg) | **U+E778** | [View](icons/icon_U+E778.svg) |
-| ![U+E77C](icons/icon_U+E77C.svg) | **U+E77C** | [View](icons/icon_U+E77C.svg) |
-| ![U+E77F](icons/icon_U+E77F.svg) | **U+E77F** | [View](icons/icon_U+E77F.svg) |
-| ![U+E783](icons/icon_U+E783.svg) | **U+E783** | [View](icons/icon_U+E783.svg) |
-| ![U+E784](icons/icon_U+E784.svg) | **U+E784** | [View](icons/icon_U+E784.svg) |
-| ![U+E785](icons/icon_U+E785.svg) | **U+E785** | [View](icons/icon_U+E785.svg) |
-| ![U+E786](icons/icon_U+E786.svg) | **U+E786** | [View](icons/icon_U+E786.svg) |
-| ![U+E790](icons/icon_U+E790.svg) | **U+E790** | [View](icons/icon_U+E790.svg) |
-| ![U+E7A6](icons/icon_U+E7A6.svg) | **U+E7A6** | [View](icons/icon_U+E7A6.svg) |
-| ![U+E7A7](icons/icon_U+E7A7.svg) | **U+E7A7** | [View](icons/icon_U+E7A7.svg) |
-| ![U+E7B3](icons/icon_U+E7B3.svg) | **U+E7B3** | [View](icons/icon_U+E7B3.svg) |
-| ![U+E7B4](icons/icon_U+E7B4.svg) | **U+E7B4** | [View](icons/icon_U+E7B4.svg) |
-| ![U+E7BA](icons/icon_U+E7BA.svg) | **U+E7BA** | [View](icons/icon_U+E7BA.svg) |
-| ![U+E7BD](icons/icon_U+E7BD.svg) | **U+E7BD** | [View](icons/icon_U+E7BD.svg) |
-| ![U+E7C2](icons/icon_U+E7C2.svg) | **U+E7C2** | [View](icons/icon_U+E7C2.svg) |
-| ![U+E7E5](icons/icon_U+E7E5.svg) | **U+E7E5** | [View](icons/icon_U+E7E5.svg) |
-| ![U+E7E6](icons/icon_U+E7E6.svg) | **U+E7E6** | [View](icons/icon_U+E7E6.svg) |
-| ![U+E7EE](icons/icon_U+E7EE.svg) | **U+E7EE** | [View](icons/icon_U+E7EE.svg) |
-| ![U+E7EF](icons/icon_U+E7EF.svg) | **U+E7EF** | [View](icons/icon_U+E7EF.svg) |
-| ![U+E7F4](icons/icon_U+E7F4.svg) | **U+E7F4** | [View](icons/icon_U+E7F4.svg) |
-| ![U+E7FC](icons/icon_U+E7FC.svg) | **U+E7FC** | [View](icons/icon_U+E7FC.svg) |
-| ![U+E808](icons/icon_U+E808.svg) | **U+E808** | [View](icons/icon_U+E808.svg) |
-| ![U+E814](icons/icon_U+E814.svg) | **U+E814** | [View](icons/icon_U+E814.svg) |
-| ![U+E81C](icons/icon_U+E81C.svg) | **U+E81C** | [View](icons/icon_U+E81C.svg) |
-| ![U+E81D](icons/icon_U+E81D.svg) | **U+E81D** | [View](icons/icon_U+E81D.svg) |
-| ![U+E820](icons/icon_U+E820.svg) | **U+E820** | [View](icons/icon_U+E820.svg) |
-| ![U+E823](icons/icon_U+E823.svg) | **U+E823** | [View](icons/icon_U+E823.svg) |
-| ![U+E82E](icons/icon_U+E82E.svg) | **U+E82E** | [View](icons/icon_U+E82E.svg) |
-| ![U+E836](icons/icon_U+E836.svg) | **U+E836** | [View](icons/icon_U+E836.svg) |
-| ![U+E88F](icons/icon_U+E88F.svg) | **U+E88F** | [View](icons/icon_U+E88F.svg) |
-| ![U+E890](icons/icon_U+E890.svg) | **U+E890** | [View](icons/icon_U+E890.svg) |
-| ![U+E891](icons/icon_U+E891.svg) | **U+E891** | [View](icons/icon_U+E891.svg) |
-| ![U+E892](icons/icon_U+E892.svg) | **U+E892** | [View](icons/icon_U+E892.svg) |
-| ![U+E894](icons/icon_U+E894.svg) | **U+E894** | [View](icons/icon_U+E894.svg) |
-| ![U+E895](icons/icon_U+E895.svg) | **U+E895** | [View](icons/icon_U+E895.svg) |
-| ![U+E896](icons/icon_U+E896.svg) | **U+E896** | [View](icons/icon_U+E896.svg) |
-| ![U+E898](icons/icon_U+E898.svg) | **U+E898** | [View](icons/icon_U+E898.svg) |
+| ![U+E30F](icons/undocumented/icon_U+E30F.svg) | **U+E30F** | [View](icons/undocumented/icon_U+E30F.svg) |
+| ![U+E314](icons/undocumented/icon_U+E314.svg) | **U+E314** | [View](icons/undocumented/icon_U+E314.svg) |
+| ![U+E35F](icons/undocumented/icon_U+E35F.svg) | **U+E35F** | [View](icons/undocumented/icon_U+E35F.svg) |
+| ![U+E365](icons/undocumented/icon_U+E365.svg) | **U+E365** | [View](icons/undocumented/icon_U+E365.svg) |
+| ![U+E36C](icons/undocumented/icon_U+E36C.svg) | **U+E36C** | [View](icons/undocumented/icon_U+E36C.svg) |
+| ![U+E36E](icons/undocumented/icon_U+E36E.svg) | **U+E36E** | [View](icons/undocumented/icon_U+E36E.svg) |
+| ![U+E36F](icons/undocumented/icon_U+E36F.svg) | **U+E36F** | [View](icons/undocumented/icon_U+E36F.svg) |
+| ![U+E399](icons/undocumented/icon_U+E399.svg) | **U+E399** | [View](icons/undocumented/icon_U+E399.svg) |
+| ![U+E39A](icons/undocumented/icon_U+E39A.svg) | **U+E39A** | [View](icons/undocumented/icon_U+E39A.svg) |
+| ![U+E39B](icons/undocumented/icon_U+E39B.svg) | **U+E39B** | [View](icons/undocumented/icon_U+E39B.svg) |
+| ![U+E39C](icons/undocumented/icon_U+E39C.svg) | **U+E39C** | [View](icons/undocumented/icon_U+E39C.svg) |
+| ![U+E3B9](icons/undocumented/icon_U+E3B9.svg) | **U+E3B9** | [View](icons/undocumented/icon_U+E3B9.svg) |
+| ![U+E3DB](icons/undocumented/icon_U+E3DB.svg) | **U+E3DB** | [View](icons/undocumented/icon_U+E3DB.svg) |
+| ![U+E3DC](icons/undocumented/icon_U+E3DC.svg) | **U+E3DC** | [View](icons/undocumented/icon_U+E3DC.svg) |
+| ![U+E3F2](icons/undocumented/icon_U+E3F2.svg) | **U+E3F2** | [View](icons/undocumented/icon_U+E3F2.svg) |
+| ![U+E3F3](icons/undocumented/icon_U+E3F3.svg) | **U+E3F3** | [View](icons/undocumented/icon_U+E3F3.svg) |
+| ![U+E435](icons/undocumented/icon_U+E435.svg) | **U+E435** | [View](icons/undocumented/icon_U+E435.svg) |
+| ![U+E43C](icons/undocumented/icon_U+E43C.svg) | **U+E43C** | [View](icons/undocumented/icon_U+E43C.svg) |
+| ![U+E456](icons/undocumented/icon_U+E456.svg) | **U+E456** | [View](icons/undocumented/icon_U+E456.svg) |
+| ![U+E4DA](icons/undocumented/icon_U+E4DA.svg) | **U+E4DA** | [View](icons/undocumented/icon_U+E4DA.svg) |
+| ![U+E4DB](icons/undocumented/icon_U+E4DB.svg) | **U+E4DB** | [View](icons/undocumented/icon_U+E4DB.svg) |
+| ![U+E562](icons/undocumented/icon_U+E562.svg) | **U+E562** | [View](icons/undocumented/icon_U+E562.svg) |
+| ![U+E666](icons/undocumented/icon_U+E666.svg) | **U+E666** | [View](icons/undocumented/icon_U+E666.svg) |
+| ![U+E67F](icons/undocumented/icon_U+E67F.svg) | **U+E67F** | [View](icons/undocumented/icon_U+E67F.svg) |
+| ![U+E695](icons/undocumented/icon_U+E695.svg) | **U+E695** | [View](icons/undocumented/icon_U+E695.svg) |
+| ![U+E696](icons/undocumented/icon_U+E696.svg) | **U+E696** | [View](icons/undocumented/icon_U+E696.svg) |
+| ![U+E697](icons/undocumented/icon_U+E697.svg) | **U+E697** | [View](icons/undocumented/icon_U+E697.svg) |
+| ![U+E701](icons/undocumented/icon_U+E701.svg) | **U+E701** | [View](icons/undocumented/icon_U+E701.svg) |
+| ![U+E706](icons/undocumented/icon_U+E706.svg) | **U+E706** | [View](icons/undocumented/icon_U+E706.svg) |
+| ![U+E709](icons/undocumented/icon_U+E709.svg) | **U+E709** | [View](icons/undocumented/icon_U+E709.svg) |
+| ![U+E70A](icons/undocumented/icon_U+E70A.svg) | **U+E70A** | [View](icons/undocumented/icon_U+E70A.svg) |
+| ![U+E70B](icons/undocumented/icon_U+E70B.svg) | **U+E70B** | [View](icons/undocumented/icon_U+E70B.svg) |
+| ![U+E710](icons/undocumented/icon_U+E710.svg) | **U+E710** | [View](icons/undocumented/icon_U+E710.svg) |
+| ![U+E714](icons/undocumented/icon_U+E714.svg) | **U+E714** | [View](icons/undocumented/icon_U+E714.svg) |
+| ![U+E71A](icons/undocumented/icon_U+E71A.svg) | **U+E71A** | [View](icons/undocumented/icon_U+E71A.svg) |
+| ![U+E71D](icons/undocumented/icon_U+E71D.svg) | **U+E71D** | [View](icons/undocumented/icon_U+E71D.svg) |
+| ![U+E71F](icons/undocumented/icon_U+E71F.svg) | **U+E71F** | [View](icons/undocumented/icon_U+E71F.svg) |
+| ![U+E720](icons/undocumented/icon_U+E720.svg) | **U+E720** | [View](icons/undocumented/icon_U+E720.svg) |
+| ![U+E722](icons/undocumented/icon_U+E722.svg) | **U+E722** | [View](icons/undocumented/icon_U+E722.svg) |
+| ![U+E725](icons/undocumented/icon_U+E725.svg) | **U+E725** | [View](icons/undocumented/icon_U+E725.svg) |
+| ![U+E729](icons/undocumented/icon_U+E729.svg) | **U+E729** | [View](icons/undocumented/icon_U+E729.svg) |
+| ![U+E736](icons/undocumented/icon_U+E736.svg) | **U+E736** | [View](icons/undocumented/icon_U+E736.svg) |
+| ![U+E737](icons/undocumented/icon_U+E737.svg) | **U+E737** | [View](icons/undocumented/icon_U+E737.svg) |
+| ![U+E738](icons/undocumented/icon_U+E738.svg) | **U+E738** | [View](icons/undocumented/icon_U+E738.svg) |
+| ![U+E73A](icons/undocumented/icon_U+E73A.svg) | **U+E73A** | [View](icons/undocumented/icon_U+E73A.svg) |
+| ![U+E73D](icons/undocumented/icon_U+E73D.svg) | **U+E73D** | [View](icons/undocumented/icon_U+E73D.svg) |
+| ![U+E73F](icons/undocumented/icon_U+E73F.svg) | **U+E73F** | [View](icons/undocumented/icon_U+E73F.svg) |
+| ![U+E740](icons/undocumented/icon_U+E740.svg) | **U+E740** | [View](icons/undocumented/icon_U+E740.svg) |
+| ![U+E748](icons/undocumented/icon_U+E748.svg) | **U+E748** | [View](icons/undocumented/icon_U+E748.svg) |
+| ![U+E749](icons/undocumented/icon_U+E749.svg) | **U+E749** | [View](icons/undocumented/icon_U+E749.svg) |
+| ![U+E74F](icons/undocumented/icon_U+E74F.svg) | **U+E74F** | [View](icons/undocumented/icon_U+E74F.svg) |
+| ![U+E757](icons/undocumented/icon_U+E757.svg) | **U+E757** | [View](icons/undocumented/icon_U+E757.svg) |
+| ![U+E75C](icons/undocumented/icon_U+E75C.svg) | **U+E75C** | [View](icons/undocumented/icon_U+E75C.svg) |
+| ![U+E75F](icons/undocumented/icon_U+E75F.svg) | **U+E75F** | [View](icons/undocumented/icon_U+E75F.svg) |
+| ![U+E760](icons/undocumented/icon_U+E760.svg) | **U+E760** | [View](icons/undocumented/icon_U+E760.svg) |
+| ![U+E762](icons/undocumented/icon_U+E762.svg) | **U+E762** | [View](icons/undocumented/icon_U+E762.svg) |
+| ![U+E767](icons/undocumented/icon_U+E767.svg) | **U+E767** | [View](icons/undocumented/icon_U+E767.svg) |
+| ![U+E768](icons/undocumented/icon_U+E768.svg) | **U+E768** | [View](icons/undocumented/icon_U+E768.svg) |
+| ![U+E76D](icons/undocumented/icon_U+E76D.svg) | **U+E76D** | [View](icons/undocumented/icon_U+E76D.svg) |
+| ![U+E76E](icons/undocumented/icon_U+E76E.svg) | **U+E76E** | [View](icons/undocumented/icon_U+E76E.svg) |
+| ![U+E773](icons/undocumented/icon_U+E773.svg) | **U+E773** | [View](icons/undocumented/icon_U+E773.svg) |
+| ![U+E775](icons/undocumented/icon_U+E775.svg) | **U+E775** | [View](icons/undocumented/icon_U+E775.svg) |
+| ![U+E777](icons/undocumented/icon_U+E777.svg) | **U+E777** | [View](icons/undocumented/icon_U+E777.svg) |
+| ![U+E778](icons/undocumented/icon_U+E778.svg) | **U+E778** | [View](icons/undocumented/icon_U+E778.svg) |
+| ![U+E77C](icons/undocumented/icon_U+E77C.svg) | **U+E77C** | [View](icons/undocumented/icon_U+E77C.svg) |
+| ![U+E77F](icons/undocumented/icon_U+E77F.svg) | **U+E77F** | [View](icons/undocumented/icon_U+E77F.svg) |
+| ![U+E783](icons/undocumented/icon_U+E783.svg) | **U+E783** | [View](icons/undocumented/icon_U+E783.svg) |
+| ![U+E784](icons/undocumented/icon_U+E784.svg) | **U+E784** | [View](icons/undocumented/icon_U+E784.svg) |
+| ![U+E785](icons/undocumented/icon_U+E785.svg) | **U+E785** | [View](icons/undocumented/icon_U+E785.svg) |
+| ![U+E786](icons/undocumented/icon_U+E786.svg) | **U+E786** | [View](icons/undocumented/icon_U+E786.svg) |
+| ![U+E790](icons/undocumented/icon_U+E790.svg) | **U+E790** | [View](icons/undocumented/icon_U+E790.svg) |
+| ![U+E7A6](icons/undocumented/icon_U+E7A6.svg) | **U+E7A6** | [View](icons/undocumented/icon_U+E7A6.svg) |
+| ![U+E7A7](icons/undocumented/icon_U+E7A7.svg) | **U+E7A7** | [View](icons/undocumented/icon_U+E7A7.svg) |
+| ![U+E7B3](icons/undocumented/icon_U+E7B3.svg) | **U+E7B3** | [View](icons/undocumented/icon_U+E7B3.svg) |
+| ![U+E7B4](icons/undocumented/icon_U+E7B4.svg) | **U+E7B4** | [View](icons/undocumented/icon_U+E7B4.svg) |
+| ![U+E7BA](icons/undocumented/icon_U+E7BA.svg) | **U+E7BA** | [View](icons/undocumented/icon_U+E7BA.svg) |
+| ![U+E7BD](icons/undocumented/icon_U+E7BD.svg) | **U+E7BD** | [View](icons/undocumented/icon_U+E7BD.svg) |
+| ![U+E7C2](icons/undocumented/icon_U+E7C2.svg) | **U+E7C2** | [View](icons/undocumented/icon_U+E7C2.svg) |
+| ![U+E7E5](icons/undocumented/icon_U+E7E5.svg) | **U+E7E5** | [View](icons/undocumented/icon_U+E7E5.svg) |
+| ![U+E7E6](icons/undocumented/icon_U+E7E6.svg) | **U+E7E6** | [View](icons/undocumented/icon_U+E7E6.svg) |
+| ![U+E7EE](icons/undocumented/icon_U+E7EE.svg) | **U+E7EE** | [View](icons/undocumented/icon_U+E7EE.svg) |
+| ![U+E7EF](icons/undocumented/icon_U+E7EF.svg) | **U+E7EF** | [View](icons/undocumented/icon_U+E7EF.svg) |
+| ![U+E7F4](icons/undocumented/icon_U+E7F4.svg) | **U+E7F4** | [View](icons/undocumented/icon_U+E7F4.svg) |
+| ![U+E7FC](icons/undocumented/icon_U+E7FC.svg) | **U+E7FC** | [View](icons/undocumented/icon_U+E7FC.svg) |
+| ![U+E808](icons/undocumented/icon_U+E808.svg) | **U+E808** | [View](icons/undocumented/icon_U+E808.svg) |
+| ![U+E814](icons/undocumented/icon_U+E814.svg) | **U+E814** | [View](icons/undocumented/icon_U+E814.svg) |
+| ![U+E81C](icons/undocumented/icon_U+E81C.svg) | **U+E81C** | [View](icons/undocumented/icon_U+E81C.svg) |
+| ![U+E81D](icons/undocumented/icon_U+E81D.svg) | **U+E81D** | [View](icons/undocumented/icon_U+E81D.svg) |
+| ![U+E820](icons/undocumented/icon_U+E820.svg) | **U+E820** | [View](icons/undocumented/icon_U+E820.svg) |
+| ![U+E823](icons/undocumented/icon_U+E823.svg) | **U+E823** | [View](icons/undocumented/icon_U+E823.svg) |
+| ![U+E82E](icons/undocumented/icon_U+E82E.svg) | **U+E82E** | [View](icons/undocumented/icon_U+E82E.svg) |
+| ![U+E836](icons/undocumented/icon_U+E836.svg) | **U+E836** | [View](icons/undocumented/icon_U+E836.svg) |
+| ![U+E88F](icons/undocumented/icon_U+E88F.svg) | **U+E88F** | [View](icons/undocumented/icon_U+E88F.svg) |
+| ![U+E890](icons/undocumented/icon_U+E890.svg) | **U+E890** | [View](icons/undocumented/icon_U+E890.svg) |
+| ![U+E891](icons/undocumented/icon_U+E891.svg) | **U+E891** | [View](icons/undocumented/icon_U+E891.svg) |
+| ![U+E892](icons/undocumented/icon_U+E892.svg) | **U+E892** | [View](icons/undocumented/icon_U+E892.svg) |
+| ![U+E894](icons/undocumented/icon_U+E894.svg) | **U+E894** | [View](icons/undocumented/icon_U+E894.svg) |
+| ![U+E895](icons/undocumented/icon_U+E895.svg) | **U+E895** | [View](icons/undocumented/icon_U+E895.svg) |
+| ![U+E896](icons/undocumented/icon_U+E896.svg) | **U+E896** | [View](icons/undocumented/icon_U+E896.svg) |
+| ![U+E898](icons/undocumented/icon_U+E898.svg) | **U+E898** | [View](icons/undocumented/icon_U+E898.svg) |
 
-*... and 662 more Unicode icons*
+*... and 662 more undocumented icons*
 
 </details>
 
@@ -382,6 +386,8 @@ Additional icons identified by Unicode value.
 ### In HTML
 ```html
 <img src="icons/Account.svg" alt="Account" width="24" height="24">
+<!-- Or undocumented icons -->
+<img src="icons/undocumented/icon_U+E700.svg" alt="Icon" width="24" height="24">
 ```
 
 ### In CSS
